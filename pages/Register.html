@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css" type="text/css">
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css" type="text/css">
+  <title>Register</title>
+  <link rel="stylesheet" href="../assets/css/style-register.css">
+
+  <!-- <link href="css/font-awesome.min.css" rel="stylesheet" /> -->
+  <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <!-- <link rel="stylesheet" href="css/style.scss"> -->
+  <link rel="stylesheet" href="../assets/css/style_homepage.scss">
+  <!-- Custom styles for this template -->
+  <!-- <link href="css/style.css" rel="stylesheet" /> -->
+  <link href="../assets/css/style_homepage.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <!-- <link href="css/responsive.css" rel="stylesheet" /> -->
+  <link href="../assets/css/responsive_homepage.css" rel="stylesheet" />
+  <style>
+    .dropbtn {
+      background-color: #fff;
+      color: #000;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      border-radius: 5px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      text-transform: uppercase;
+      background-color: #fff;
+      width: 100%;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      border-radius: 5px;
+      color: black;
+      padding: 7px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      border-radius: 5px;
+      background-color: #a06ec4;
+      color: #fff;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      border-radius: 5px;
+      background-color: #8019c8;
+      color: #fff;
+    }
+  </style>
+
+  <script>
+    information = [];
+    function Check() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var pwd = document.getElementById("pwd").value;
+      var pwd_con = document.getElementById("pwd_con").value;
+
+      var check_name = /^[a-zA-Z0-9]{6,18}$/;
+      if (!check_name.test(name)) {
+        alert("Login name is not empty with the length in range 6-18 characters/digits.");
+        document.getElementById("name").focus();
+        return false;
+      }
+      var check_email = /^\w+[@]\w+[.]\w{3}$/;
+      if ((email.length == 0) || (!check_email.test(email))) {
+        alert("Email is not empty with the format must have xxxx@xxx.xxx");
+        document.getElementById("email").focus();
+        return false;
+      }
+      var check_pwd = /^[a-zA-Z0-9]{6,18}$/;
+      if ((pwd.length == 0) || (!check_pwd.test(pwd))) {
+        alert("Password is not empty with the length in range 6-18 characters/digits.");
+        document.getElementById("pwd").focus();
+        return false;
+      }
+      if (pwd_con.length == 0) {
+        alert("Comfirm Password is not empty.");
+        document.getElementById("pwd_con").focus();
+        return false;
+      } else if (pwd_con != pwd) {
+        alert("Comfirm Password must be same to Password.");
+        document.getElementById("pwd_con").focus();
+        return false;
+      }
+      else {
+        information.push("Congratulation!",
+          "Your account has been create successfully!",
+          "++++++++++++++++++++++++++++++++",
+          "Register Information",
+          "++++++++++++++++++++++++++++++++",
+          "Login name: " + name,
+          "Email address: " + email,)
+        alert(information.join("\n"));
+      }
+    }
+  </script>
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="HomePage.html">
+            <!-- <span> Clear Reflections </span> -->
+            <span>
+              <!-- <img src="images/Frame_3-removebg.png" width="40px" alt=""> -->
+              <img src="../assets/img/img_homepage/Frame_3-removebg.png" width="40px" alt="">
+            </span>
+
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <!-- <li class="nav-item">
+                    <a class="nav-link" href="Menu.html">Menu</a>
+                  </li> -->
+              <li class="nav-item">
+                <div class="dropdown" style="float: left">
+                  <a class="nav-link" href="./AllOfProduct.html"><button class="dropbtn">Categories</button></a>
+                  <div class="dropdown-content" style="text-align: center;">
+                    <a href="Livingroom.html">Living Room Mirrors</a>
+                    <a href="Bathroom.html">BathRoom Mirrors</a>
+                    <a href="Dressing.html">Dressing Room Mirrors</a>
+                    <a href="Bedroom.html">Bedroom Mirrors</a>
+                    <a href="WoodenFramed.html">Wooden Framed Mirrors</a>
+                    <a href="AcrylicBordered.html">Acrylic Bordered Mirrors</a>
+                    <a href="MetalBordered.html">Metal Bordered Mirrors</a>
+                    <a href="Decorative.html">Decorative Mirrors</a>
+                    <a href="Led.html">Led Mirrors</a>
+                    <a href="Bluetooth.html">Bluetooth Mirrors</a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="HomePage.html">Home Page<span class="sr-only">(current)</span></a>
+              </li>
+              <!-- <li class="nav-item">
+                    <a class="nav-link" href="Categories.html">Categories</a>
+                  </li> -->
+              <li class="nav-item">
+                <a class="nav-link" href="ContactUs.html">Contact Us</a>
+              </li>
+            </ul>
+            <div class="user_optio_box">
+              <a href="Register.html">
+                <i class="fa fa-user" aria-hidden="true"> Sign In</i>
+              </a>
+              <!-- <a href="">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                  </a> -->
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+
+  </div>
+  <!-- <section class="contact_section layout_padding"> -->
+  <main role="main">
+    <!-- Block content -->
+    <div class="container mt-4">
+      <div id="thongbao" class="alert alert-danger d-none face" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+
+      <div class="card">
+        <section class="contact_section layout_padding">
+          <div class="container">
+            <div class="heading_container">
+              <h2>
+                Register
+              </h2>                
+              <div class="form_container">
+                <form action="" onsubmit="return Check();">
+                  <div class="form-group">
+                    <label>Enter your Login Name:</label>
+                    <input type="text/number" class="form-control" id="name" placeholder="Login Name">
+                  </div>
+                  <div class="form-group">
+                    <label>Enter your Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Email">
+                  </div>
+                  <div class="form-group">
+                    <label>Enter your Password:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Password">
+                  </div>
+                  <div class="form-group">
+                    <label>Confirm password:</label>
+                    <input type="password" class="form-control" id="pwd_con" placeholder="Confirm password">
+                  </div>
+                  <div class="btn_box">
+                    <button type="submit">
+                      REGISTER
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+  </main>
+  <!-- end product section -->
+  <br>
+  <!-- info section -->
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="info_logo">
+        <h2>Clear Reflections</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="info_contact">
+            <h5>About Shop</h5>
+            <div>
+              <div class="img-box">
+                <!-- <img src="images/location-white.png" width="18px" alt="" /> -->
+                <img src="../assets/img/img_homepage/location-white.png" width="18px" alt="" />
+              </div>
+              <p>Address</p>
+            </div>
+            <div>
+              <div class="img-box">
+                <!-- <img src="images/telephone-white.png" width="12px" alt="" /> -->
+                <img src="../assets/img/img_homepage/telephone-white.png" width="12px" alt="" />
+              </div>
+              <p>+01 1234567890</p>
+            </div>
+            <div>
+              <div class="img-box">
+                <!-- <img src="images/envelope-white.png" width="18px" alt="" /> -->
+                <img src="../assets/img/img_homepage/envelope-white.png" width="18px" alt="" />
+              </div>
+              <p>
+                Email
+                <a href="mailto:abc@example.com">abc@gmail.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_info">
+            <h5>Informations</h5>
+            <p>
+              The website (in this project) is a tool that brings everything
+              about mirrors to you such as full-length mirrors to vanity
+              mirrors, decorative mirrors, office mirrors, home mirrors, ....
+              to suit all of your needs.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="info_insta">
+            <h5>Instagram</h5>
+            <div class="insta_container">
+              <div class="row m-0">
+                <div class="col-4 px-0">
+                  <a href="">
+                    <div class="insta-box b-1">
+                      <!-- <img src="images/images.jpeg" alt="" /> -->
+                      <img src="../assets/img/img_homepage/images.jpeg" alt="" />
+                    </div>
+                  </a>
+                </div>
+                <div class="col-4 px-0">
+                  <a href="">
+                    <div class="insta-box b-1">
+                      <!-- <img src="images/images.jpeg" alt="" /> -->
+                      <img src="../assets/img/img_homepage/images.jpeg" alt="" />
+                    </div>
+                  </a>
+                </div>
+                <div class="col-4 px-0">
+                  <a href="">
+                    <div class="insta-box b-1">
+                      <!-- <img src="images/images.jpeg" alt="" /> -->
+                      <img src="../assets/img/img_homepage/images.jpeg" alt="" />
+                    </div>
+                  </a>
+                </div>
+                <div class="col-4 px-0">
+                  <a href="">
+                    <div class="insta-box b-1">
+                      <!-- <img src="images/images.jpeg" alt="" /> -->
+                      <img src="../assets/img/img_homepage/images.jpeg" alt="" />
+                    </div>
+                  </a>
+                </div>
+                <div class="col-4 px-0">
+                  <a href="">
+                    <div class="insta-box b-1">
+                      <!-- <img src="images/images.jpeg" alt="" /> -->
+                      <img src="../assets/img/img_homepage/images.jpeg" alt="" />
+                    </div>
+                  </a>
+                </div>
+                <div class="col-4 px-0">
+                  <a href="">
+                    <div class="insta-box b-1">
+                      <!-- <img src="images/images.jpeg" alt="" /> -->
+                      <img src="../assets/img/img_homepage/images.jpeg" alt="" />
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="info_form">
+            <h5>Newsletter</h5>
+            <form action="">
+              <input type="email" placeholder="Enter your email" />
+              <button>Subscribe</button>
+            </form>
+            <div class="social_box">
+              <a href="">
+                <!-- <img src="images/fb.png" alt="" /> -->
+                <img src="../assets/img/img_homepage/fb.png" alt="" />
+              </a>
+              <a href="">
+                <!-- <img src="images/twitter.png" alt="" /> -->
+                <img src="../assets/img/img_homepage/twitter.png" alt="" />
+              </a>
+              <a href="">
+                <!-- <img src="images/linkedin.png" alt="" /> -->
+                <img src="../assets/img/img_homepage/linkedin.png" alt="" />
+              </a>
+              <a href="">
+                <!-- <img src="images/youtube.png" alt="" /> -->
+                <img src="../assets/img/img_homepage/youtube.png" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info_section -->
+  <!-- footer section -->
+  <section class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="#">Clear Reflections</a>
+      </p>
+    </div>
+  </section>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script type="text/javascript" src="../assets/js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+  <!-- custom js -->
+  <script type="text/javascript" src="../assets/js/custom.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <!-- Google Map -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+
+</body>
+
+</html>

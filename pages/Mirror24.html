@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-100">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Detail</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css" type="text/css">
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css" type="text/css">
+
+  <!-- Custom css -->
+  <link rel="stylesheet" href="../assets/css/product-detail.css" type="text/css">
+  <script type="text/javascript" src="../assets/js/detail_categories.js"></script>
+
+  <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style_homepage.scss">
+  <!-- Custom styles for this template -->
+  <link href="../assets/css/style_homepage.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="../assets/css/responsive_homepage.css" rel="stylesheet" />
+
+  <script>
+    with (document) {
+      for (var i = 0; i <= mirrors.length; i += 1) {
+        i = 23;
+        var z = (i + 1);
+        if (z >= mirrors.length) {
+          z = (z - mirrors.length);
+        }
+        var x = (i + 2);
+        if (x >= mirrors.length) {
+          x = (x - mirrors.length);
+        }
+        var y = (i + 3);
+        if (y >= mirrors.length) {
+          y = (y - mirrors.length);
+        }
+        var j = (i + 4);
+        if (j >= mirrors.length) {
+          j = (j - mirrors.length);
+        }
+        var k = (i + 5);
+        if (k >= mirrors.length) {
+          k = (k - mirrors.length);
+        }
+        name = read(mirrors[i].name);
+        type = read(mirrors[i].type);
+        size = read(mirrors[i].size);
+        color = read(mirrors[i].color);
+        material = read(mirrors[i].material);
+        price = read(mirrors[i].price);
+        description = read(mirrors[i].description);
+        img = read(mirrors[i].img);
+        ID = read(mirrors[i].ID);
+      }
+    }
+  </script>
+
+  <style>
+    .dropbtn {
+      background-color: #fff;
+      color: #000;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      border-radius: 5px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      text-transform: uppercase;
+      background-color: #fff;
+      width: 100%;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      border-radius: 5px;
+      color: black;
+      padding: 7px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      border-radius: 5px;
+      background-color: #a06ec4;
+      color: #fff;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      border-radius: 5px;
+      background-color: #8019c8;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="HomePage.html">
+            <span>
+              <img src="../assets/img/img_homepage/Frame_3-removebg.png" width="40px" alt="">
+            </span>
+
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <!-- <li class="nav-item">
+                    <a class="nav-link" href="Menu.html">Menu</a>
+                  </li> -->
+              <li class="nav-item">
+                <div class="dropdown" style="float: left">
+                  <a class="nav-link" href="./AllOfProduct.html"><button class="dropbtn">Categories</button></a>
+                  <div class="dropdown-content" style="text-align: center;">
+                    <a href="Livingroom.html">Living Room Mirrors</a>
+                    <a href="Bathroom.html">BathRoom Mirrors</a>
+                    <a href="Dressing.html">Dressing Room Mirrors</a>
+                    <a href="Bedroom.html">Bedroom Mirrors</a>
+                    <a href="WoodenFramed.html">Wooden Framed Mirrors</a>
+                    <a href="AcrylicBordered.html">Acrylic Bordered Mirrors</a>
+                    <a href="MetalBordered.html">Metal Bordered Mirrors</a>
+                    <a href="Decorative.html">Decorative Mirrors</a>
+                    <a href="Led.html">Led Mirrors</a>
+                    <a href="Bluetooth.html">Bluetooth Mirrors</a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="HomePage.html">Home Page<span class="sr-only">(current)</span></a>
+              </li>
+              <!-- <li class="nav-item">
+                    <a class="nav-link" href="Categories.html">Categories</a>
+                  </li> -->
+              <li class="nav-item">
+                <a class="nav-link" href="ContactUs.html">Contact Us</a>
+              </li>
+            </ul>
+            <div class="user_optio_box">
+              <a href="Register.html">
+                <i class="fa fa-user" aria-hidden="true"> Sign In</i>
+              </a>
+              <!-- <a href="">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                  </a> -->
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+
+  </div>
+
+
+  <main role="main">
+    <!-- Block content -->
+    <div class="container mt-4">
+      <div id="thongbao" class="alert alert-danger d-none face" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+
+      <div class="card">
+        <div class="container-fliud">
+          <form name="frmsanphamchitiet" id="frmsanphamchitiet">
+            <div class="wrapper row">
+              <div class="preview col-md-6">
+                <div class="preview-pic tab-content">
+                  <div class="tab-pane" id="pic-1">
+                  </div>
+                  <div class="tab-pane" id="pic-2">
+                  </div>
+                  <div class="tab-pane active" id="pic-3">
+                  </div>
+                </div>
+                <ul class="preview-thumbnail nav nav-tabs">
+                  <li class="active">
+                    <a data-target="#pic-1" data-toggle="tab" id="pic_1">
+                    </a>
+                    <div class="btn-box">
+                      <a id="sug_1"></a>
+                    </div>
+                  </li>
+                  <li class="active">
+                    <a data-target="#pic-2" data-toggle="tab" id="pic_2">
+                    </a>
+                    <div class="btn-box">
+                      <a id="sug_2"></a>
+                    </div>
+                  </li>
+                  <li class="active">
+                    <a data-target="#pic-3" data-toggle="tab" id="pic_3">
+                    </a>
+                    <div class="btn-box">
+                      <a id="sug_3"></a>
+                    </div>
+                  </li>
+                  <li class="active">
+                    <a data-target="#pic-3" data-toggle="tab" id="pic_4">
+                    </a>
+                    <div class="btn-box">
+                      <a id="sug_4"></a>
+                    </div>
+                  </li>
+                  <li class="active">
+                    <a data-target="#pic-3" data-toggle="tab" id="pic_5">
+                    </a>
+                    <div class="btn-box">
+                      <a id="sug_5"></a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="details col-md-6">
+                <h3 class="product-title" id="product_title"></h3>
+                <div class="rating">
+                  <div class="stars">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                  <span class="review-no">999 reviews</span>
+                </div>
+                <p class="product-description">Type: <span id="type"></span></p>
+                <p class="product-description">Material: <span id="material"></span></p>
+                <small class="text-muted">Old prices: <s><span>4000 USD</span></s></small>
+                <h4 class="price">Prices: <span id="price"></span></h4>
+                <p class="vote"><strong>100%</strong> products <strong>quality</strong>, reputation
+                  <strong>guaranteed</strong>!
+                </p>
+                <h5 class="sizes">sizes:
+                  <span class="size" data-toggle="tooltip" id="size"></span>
+                </h5>
+                <h5 class="colors">colors: <span id="color"></span><br>
+                  <span class="color golden not-available" data-toggle="tooltip"></span>
+                  <span class="color white"></span>
+                  <span class="color brown"></span>
+                  <span class="color silver"></span>
+                  <span class="color antique silver"></span>
+                  <span class="color wood"></span>
+                </h5>
+                <div class="form-group">
+                  <label>Recipient's Phone Number:</label>
+                  <input type="text/number" class="form-control" id="soluong" name="soluong">
+                </div>
+                <div class="form-group">
+                  <label>Delivery Address:</label>
+                  <input type="text" class="form-control" id="soluong" name="soluong">
+                </div>
+                <div class="form-group">
+                  <label>Order Quantity:</label>
+                  <input type="number" class="form-control" id="soluong" name="soluong">
+                </div>
+                <div class="action">
+                  <a class="add-to-cart btn btn-default" id="btnThemVaoGioHang">Add to cart</a>
+                  <a class="like btn btn-default" href="#"><span class="fa fa-heart"></span></a>
+                </div>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="container-fluid">
+          <h3>Description</h3>
+          <div class="row">
+            <div class="col" id="description"></div>
+          </div>
+        </div>
+      </div>
+      <!-- End block content -->
+  </main>
+
+  <script>
+    var name = mirrors[i].name;
+    document.getElementById("product_title").innerHTML = name;
+    var type = mirrors[i].type;
+    document.getElementById("type").innerHTML = type;
+    var size = mirrors[i].size;
+    document.getElementById("size").innerHTML = size;
+    var color = mirrors[i].color;
+    document.getElementById("color").innerHTML = color;
+    var material = mirrors[i].material;
+    document.getElementById("material").innerHTML = material;
+    var price = mirrors[i].price;
+    document.getElementById("price").innerHTML = price;
+    var description = mirrors[i].description;
+    document.getElementById("description").innerHTML = description;
+    var img_main = mirrors[i].img;
+    document.getElementById("pic-1").innerHTML = "<img src='../assets/img/img_detail/" + img_main + "'/>";
+    document.getElementById("pic-2").innerHTML = "<img src='../assets/img/img_detail/" + img_main + "'/>";
+    document.getElementById("pic-3").innerHTML = "<img src='../assets/img/img_detail/" + img_main + "'/>";
+    var img_sug_1 = mirrors[z].img;
+    document.getElementById("pic_1").innerHTML = "<img src='../assets/img/img_detail/" + img_sug_1 + "'/>";
+    var img_sug_2 = mirrors[x].img;
+    document.getElementById("pic_2").innerHTML = "<img src='../assets/img/img_detail/" + img_sug_2 + "'/>";
+    var img_sug_3 = mirrors[y].img;
+    document.getElementById("pic_3").innerHTML = "<img src='../assets/img/img_detail/" + img_sug_3 + "'/>";
+    var img_sug_4 = mirrors[j].img;
+    document.getElementById("pic_4").innerHTML = "<img src='../assets/img/img_detail/" + img_sug_4 + "'/>";
+    var img_sug_5 = mirrors[k].img;
+    document.getElementById("pic_5").innerHTML = "<img src='../assets/img/img_detail/" + img_sug_5 + "'/>";
+
+    var sug_1 = mirrors[z].ID;
+    document.getElementById("sug_1").innerHTML = '<a href="./Mirror' + sug_1 + '.html" title="' + mirrors[z].name + '"> Detail';
+    var sug_2 = mirrors[x].ID;
+    document.getElementById("sug_2").innerHTML = '<a href="./Mirror' + sug_2 + '.html" title="' + mirrors[x].name + '"> Detail';
+    var sug_3 = mirrors[y].ID;
+    document.getElementById("sug_3").innerHTML = '<a href="./Mirror' + sug_3 + '.html" title="' + mirrors[y].name + '"> Detail';
+    var sug_4 = mirrors[j].ID;
+    document.getElementById("sug_4").innerHTML = '<a href="./Mirror' + sug_4 + '.html" title="' + mirrors[j].name + '"> Detail';
+    var sug_5 = mirrors[k].ID;
+    document.getElementById("sug_5").innerHTML = '<a href="./Mirror' + sug_5 + '.html" title="' + mirrors[k].name + '"> Detail';
+  </script>
+
+  <!-- end product section -->
+
+  <!-- information shop section -->
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="info_logo">
+        <h2>Clear Reflections</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="info_contact">
+            <h5>About Shop</h5>
+            <div>
+              <div class="img-box">
+                <img src="../assets/img/img_homepage/location-white.png" width="18px" alt="" />
+              </div>
+              <p>Address</p>
+            </div>
+            <div>
+              <div class="img-box">
+                <img src="../assets/img/img_homepage/telephone-white.png" width="12px" alt="" />
+              </div>
+              <p>+01 1234567890</p>
+            </div>
+            <div>
+              <div class="img-box">
+                <img src="../assets/img/img_homepage/envelope-white.png" width="18px" alt="" />
+              </div>
+              <p>
+                Email
+                <a href="mailto:abc@example.com">abc@gmail.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_info">
+            <h5>Informations</h5>
+            <p>
+              The website (in this project) is a tool that brings everything
+              about mirrors to you such as full-length mirrors to vanity
+              mirrors, decorative mirrors, office mirrors, home mirrors, ....
+              to suit all of your needs.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="info_insta">
+            <h5>Instagram</h5>
+            <div class="insta_container">
+              <div class="row m-0">
+                <div class="col-4 px-0">
+                  <a href="">
+                    <div class="insta-box b-1">
+                      <img src="../assets/img/img_homepage/images.jpeg" alt="" />
+                    </div>
+                  </a>
+                </div>
+                <div class="col-4 px-0">
+                  <a href="">
+                    <div class="insta-box b-1">
+                      <img src="../assets/img/img_homepage/images.jpeg" alt="" />
+                    </div>
+                  </a>
+                </div>
+                <div class="col-4 px-0">
+                  <a href="">
+                    <div class="insta-box b-1">
+                      <img src="../assets/img/img_homepage/images.jpeg" alt="" />
+                    </div>
+                  </a>
+                </div>
+                <div class="col-4 px-0">
+                  <a href="">
+                    <div class="insta-box b-1">
+                      <img src="../assets/img/img_homepage/images.jpeg" alt="" />
+                    </div>
+                  </a>
+                </div>
+                <div class="col-4 px-0">
+                  <a href="">
+                    <div class="insta-box b-1">
+                      <img src="../assets/img/img_homepage/images.jpeg" alt="" />
+                    </div>
+                  </a>
+                </div>
+                <div class="col-4 px-0">
+                  <a href="">
+                    <div class="insta-box b-1">
+                      <img src="../assets/img/img_homepage/images.jpeg" alt="" />
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="info_form">
+            <h5>Newsletter</h5>
+            <form action="">
+              <input type="email" placeholder="Enter your email" />
+              <button>Subscribe</button>
+            </form>
+            <div class="social_box">
+              <a href="">
+                <img src="../assets/img/img_homepage/fb.png" alt="" />
+              </a>
+              <a href="">
+                <img src="../assets/img/img_homepage/twitter.png" alt="" />
+              </a>
+              <a href="">
+                <img src="../assets/img/img_homepage/linkedin.png" alt="" />
+              </a>
+              <a href="">
+                <img src="../assets/img/img_homepage/youtube.png" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end information shop section -->
+  <!-- footer section -->
+  <section class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="#">Clear Reflections</a>
+      </p>
+    </div>
+  </section>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script type="text/javascript" src="../assets/js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+  <!-- custom js -->
+  <script type="text/javascript" src="../assets/js/custom.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <!-- Google Map -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+</body>
+
+</html>
